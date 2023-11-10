@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Driver Dashboard</title>
+</head>
+<body>
+    <h1>Driver Dashboard</h1>
+    <h2>List of Accepted Rides</h2>
+    <ul>
+        <!-- Display accepted rides -->
+        {% for ride in accepted_rides %}
+            <li>Ride ID: {{ ride[0] }}, Destination: {{ ride[1] }}, Passenger: {{ ride[2] }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Accept a Ride</h2>
+    <form action="/accept-ride" method="post">
+        <label>Destination:</label>
+        <input type="text" name="destination"><br><br>
+        <label>Passenger Name:</label>
+        <input type="text" name="passenger_name"><br><br>
+        <input type="submit" value="Accept Ride">
+    </form>
+
+    <h2>Cancel a Ride</h2>
+    <form action="/cancel-ride" method="post">
+        <label>Ride ID:</label>
+        <input type="text" name="ride_id"><br><br>
+        <label>Reason for cancellation:</label>
+        <input type="text" name="reason"><br><br>
+        <input type="submit" value="Cancel Ride">
+    </form>
+</body>
+</html>

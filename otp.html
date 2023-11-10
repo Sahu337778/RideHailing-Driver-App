@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTP Verification</title>
+</head>
+<body>
+    <h1>Enter OTP for Ride ID: {{ ride_id }}</h1>
+    <form action="/process-otp" method="post">
+        <input type="hidden" name="ride_id" value="{{ ride_id }}">
+        <input type="text" name="otp" placeholder="Enter OTP">
+        <input type="submit" value="Verify OTP">
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+        Email: <input type="email" name="email" required><br>
+        Password: <input type="password" name="password" required><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <h2>Sign Up</h2>
+    <form action="/signup" method="POST">
+        Email: <input type="email" name="new_email" required><br>
+        Password: <input type="password" name="new_password" required><br>
+        Confirm Password: <input type="password" name="confirm_password" required><br>
+        <input type="submit" value="Sign Up">
+    </form>
+</body>
+</html>
